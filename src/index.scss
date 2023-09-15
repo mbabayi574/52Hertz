@@ -1,0 +1,161 @@
+/* Global styles */
+html {
+  background-color: #e8ffff; // light theme background color
+  color: #1e1e2e; // light theme color
+}
+
+/* Theme Icon */
+html.dark {
+  background-color: #1e1e2e; // dark theme background color
+  color: #fdebf3; // dark theme color
+}
+
+.dark .title-link a,
+.dark .card-title,
+.dark .card-txt,
+.dark .nav-links a,
+.dark .link-card > a {
+  color: #fdebf3; // dark theme link color
+}
+
+body {
+  max-width: 540px;
+  margin: 0 auto;
+  text-align: justify;
+}
+/* Fonts */
+
+@font-face {
+  font-family: 'Retro Crafts';
+  src: url('/fonts/borensa.regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  src: url('/fonts/libre-baskerville.italic.ttf') format('truetype');
+}
+
+/* Headings */
+h1,
+h2 {
+  font-family: 'Retro Crafts', cursive;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.6em;
+  margin: 0;
+}
+
+h2 {
+  text-decoration: underline #375a7f;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+  font-size: 2.1em;
+  margin-bottom: 0;
+}
+
+/* Paragraphs */
+p {
+  font-family: 'Aileron', sans-serif;
+  font-size: 1.1em;
+  hyphens: auto;
+  line-height: 1.5;
+  text-indent: 1em;
+}
+
+/* Logos */
+.logo {
+  margin: 5px 0 0 0;
+  text-align: center;
+  /* Make Full Round Logo */
+  img {
+    border-radius: 50%;
+  }
+}
+
+/* Navigation Bar */
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0.8rem;
+}
+
+.title-link,
+.nav-links {
+  font-family: 'Retro Crafts', cursive;
+  font-size: 1.3rem;
+}
+
+.title-link a,
+.nav-links a {
+  color: #1e1e2e;
+  text-decoration: none;
+}
+
+.title-link a:hover,
+.nav-links a:hover,
+a:focus {
+  text-decoration: underline #375a7f;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.nav-links {
+  font-family: 'Aileron', sans-serif;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.nav-links a {
+  margin: 0 13px;
+}
+
+/* Card listing */
+.link-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+  gap: 1rem;
+  padding: 0;
+}
+
+/* Media Query */
+@media only screen and (max-width: 600px) {
+  body {
+    width: 320px;
+  }
+
+  .nav-bar {
+    display: initial;
+  }
+
+  .title-link {
+    text-align: center;
+  }
+
+  .nav-links {
+    text-align: center;
+  }
+
+  .nav-links a {
+    margin: 0 11px;
+  }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
+}
